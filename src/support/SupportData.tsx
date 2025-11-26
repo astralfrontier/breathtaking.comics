@@ -1,10 +1,14 @@
-import type { BreathtakingAsset } from "../AssetTypes";
+import type {
+  BreathtakingAsset,
+  BreathtakingAssetGroup,
+  BreathtakingAssetPackage,
+} from "../AssetTypes";
 
 import Action from "./action.mdx";
 import ClarionHeights from "./clarion-heights.mdx";
 import ZetaCity from "./zeta-city.mdx";
 
-const supportData: BreathtakingAsset[] = [
+const supportAssets: BreathtakingAsset[] = [
   {
     name: "A.C.T.I.O.N.",
     slug: "action",
@@ -22,4 +26,11 @@ const supportData: BreathtakingAsset[] = [
   },
 ];
 
-export default supportData;
+const supportGroups: BreathtakingAssetGroup[] = [];
+
+const supportPackage = {
+  assets: supportAssets,
+  groups: supportGroups,
+};
+
+export default supportPackage as BreathtakingAssetPackage;

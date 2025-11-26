@@ -1,20 +1,20 @@
 import { Link } from "react-router";
-import type { BreathtakingAsset } from "./AssetTypes";
+import type { BreathtakingAssetPackage } from "./AssetTypes";
 
 interface AssetListProps {
   prefix: string;
-  assets: BreathtakingAsset[];
+  assetPackage: BreathtakingAssetPackage;
   children?: React.ReactNode;
 }
 
 function AssetList(props: AssetListProps) {
-  const { prefix, assets, children } = props;
+  const { prefix, assetPackage, children } = props;
 
   return (
     <>
       {children}
       <ul>
-        {assets.map((asset) => (
+        {assetPackage.assets.map((asset) => (
           <li>
             <Link to={`/${prefix}/${asset.slug}`}>{asset.name}</Link>
           </li>

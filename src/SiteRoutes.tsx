@@ -24,23 +24,32 @@ function SiteRoutes() {
         <Route path="heroes" element={<HeroesLayout />}>
           <Route
             index
-            element={<AssetList assets={HeroData} prefix="heroes" />}
+            element={<AssetList assetPackage={HeroData} prefix="heroes" />}
           />
-          <Route path=":asset" element={<AssetView assets={HeroData} />} />
+          <Route
+            path=":asset"
+            element={<AssetView assetPackage={HeroData} />}
+          />
         </Route>
         <Route path="villains" element={<VillainsLayout />}>
           <Route
             index
-            element={<AssetList assets={VillainData} prefix="villains" />}
+            element={<AssetList assetPackage={VillainData} prefix="villains" />}
           />
-          <Route path=":asset" element={<AssetView assets={VillainData} />} />
+          <Route
+            path=":asset"
+            element={<AssetView assetPackage={VillainData} />}
+          />
         </Route>
         <Route path="support" element={<SupportsLayout />}>
           <Route
             index
-            element={<AssetList assets={SupportData} prefix="support" />}
+            element={<AssetList assetPackage={SupportData} prefix="support" />}
           />
-          <Route path=":asset" element={<AssetView assets={SupportData} />} />
+          <Route
+            path=":asset"
+            element={<AssetView assetPackage={SupportData} />}
+          />
         </Route>
         <Route path="rules" element={<RulesLayout />}>
           <Route path="eic-edition" element={<EicEdition />} />

@@ -1,7 +1,11 @@
-import type { BreathtakingAsset } from "../AssetTypes";
+import type {
+  BreathtakingAsset,
+  BreathtakingAssetGroup,
+  BreathtakingAssetPackage,
+} from "../AssetTypes";
 import Radiance from "./radiance.mdx";
 
-const heroData: BreathtakingAsset[] = [
+const heroAssets: BreathtakingAsset[] = [
   {
     name: "Radiance",
     slug: "radiance",
@@ -9,4 +13,11 @@ const heroData: BreathtakingAsset[] = [
   },
 ];
 
-export default heroData;
+const heroGroups: BreathtakingAssetGroup[] = [];
+
+const heroPackage = {
+  assets: heroAssets,
+  groups: heroGroups,
+};
+
+export default heroPackage as BreathtakingAssetPackage;

@@ -1,16 +1,16 @@
 import { useParams } from "react-router";
-import type { BreathtakingAsset } from "./AssetTypes";
+import type { BreathtakingAssetPackage } from "./AssetTypes";
 
 interface AssetViewProps {
-  assets: BreathtakingAsset[];
+  assetPackage: BreathtakingAssetPackage;
 }
 
 function AssetView(props: AssetViewProps) {
-  const { assets } = props;
+  const { assetPackage } = props;
   const { asset } = useParams();
   const assetLc = asset?.toLowerCase() ?? "";
 
-  const foundAsset = assets.find(
+  const foundAsset = assetPackage.assets.find(
     (assetData) => assetData.slug.toLowerCase() == assetLc
   );
 
