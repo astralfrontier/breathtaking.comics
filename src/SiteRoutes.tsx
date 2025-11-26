@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router";
-import Navbar from "./Navbar";
 
 import RulesLayout from "./rules/RulesLayout";
 
@@ -9,28 +8,18 @@ import MelvinEdition from "./rules/melvin-edition.mdx";
 import SupportsLayout from "./support/SupportsLayout";
 import VillainsLayout from "./villains/VillainsLayout";
 
-import HeroData from "./heroes/HeroData";
-import SupportData from "./support/SupportData";
-import VillainData from "./villains/VillainData";
 import AssetList from "./AssetList";
 import AssetView from "./AssetView";
-
-function HelloWorld() {
-  return (
-    <>
-      <Navbar />
-      <main className="container">
-        <h1>Hello World</h1>
-      </main>
-    </>
-  );
-}
+import HeroData from "./heroes/HeroData";
+import Home from "./Home";
+import SupportData from "./support/SupportData";
+import VillainData from "./villains/VillainData";
 
 function SiteRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<HelloWorld />} />
+        <Route index element={<Home />} />
         <Route path="heroes" element={<HeroesLayout />}>
           <Route
             index
