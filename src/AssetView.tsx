@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 import type { BreathtakingAssetPackage } from "./AssetTypes";
+import CcBy from "./CcBy";
 
 interface AssetViewProps {
   assetPackage: BreathtakingAssetPackage;
@@ -22,7 +23,13 @@ function AssetView(props: AssetViewProps) {
     );
   }
 
-  return foundAsset.element;
+  return (
+    <>
+      {foundAsset.element}
+
+      <CcBy />
+    </>
+  );
 }
 
 export default AssetView;
